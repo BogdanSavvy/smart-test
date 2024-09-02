@@ -1,7 +1,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
 import { UserState } from '../types/user';
 import { User } from '../../types/user';
-import axios from 'axios';
 
 const initialState: UserState = {
 	users: [],
@@ -9,7 +10,6 @@ const initialState: UserState = {
 	error: null,
 };
 
-// Async thunk to fetch users
 export const fetchUsers = createAsyncThunk<User[]>(
 	'users/fetchUsers',
 	async () => {

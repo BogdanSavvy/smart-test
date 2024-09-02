@@ -17,7 +17,7 @@ const FilterSelector: React.FC<FilterSelectorProps> = ({
 	onChange,
 }) => {
 	return (
-		<div className="relative group rounded-lg w-64 bg-gray-50 overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-0 before:bg-violet-500 before:rounded-full before:blur-lg before:[box-shadow:-60px_20px_10px_10px_#F9B0B9]">
+		<div className="relative group rounded-full w-full bg-gray-50 overflow-hidden md:w-40">
 			<svg
 				y="0"
 				xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ const FilterSelector: React.FC<FilterSelectorProps> = ({
 				viewBox="0 0 100 100"
 				preserveAspectRatio="xMidYMid meet"
 				height="100"
-				className="w-8 h-8 absolute right-0 -rotate-45 stroke-pink-300 top-1.5 group-hover:rotate-0 duration-300"
+				className="w-8 h-8 absolute right-1 -rotate-45 stroke-blue-500 top-1.5 group-hover:rotate-0 duration-300"
 			>
 				<path
 					stroke-width="4"
@@ -38,7 +38,7 @@ const FilterSelector: React.FC<FilterSelectorProps> = ({
 				></path>
 			</svg>
 			<select
-				className="appearance-none hover:placeholder-shown:bg-emerald-500 relative text-pink-400 bg-transparent ring-0 outline-none border border-neutral-500 placeholder-violet-700 text-sm font-bold rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5"
+				className="cursor-pointer appearance-none relative text-blue-500 bg-transparent ring-0 outline-none border border-neutral-500 placeholder-violet-700 text-sm font-bold rounded-full focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5"
 				value={selectedFilter}
 				onChange={onChange}
 			>

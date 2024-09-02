@@ -1,7 +1,16 @@
 import React from 'react';
 
-const Container = ({ children }: { children: React.ReactElement }) => {
-	return <div className="max-w-[1250px] mx-auto px-[15px]">{children}</div>;
+import { cn } from '../../utils';
+
+const Container: React.FC<{
+	children: React.ReactNode;
+	className?: string;
+}> = ({ children, className }) => {
+	return (
+		<div className={cn('w-full max-w-[1480px] mx-auto px-[15px]', className)}>
+			{children}
+		</div>
+	);
 };
 
 export default Container;

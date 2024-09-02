@@ -12,4 +12,5 @@ const filterUsers = (
 			.includes(searchValue.toLowerCase()),
 	);
 };
+
 export default filterUsers;
