@@ -31,15 +31,16 @@ const UserTable: React.FC = () => {
 	return (
 		<Container className="flex-grow">
 			<div className="flex flex-row items-center justify-between">
-				<h1 className="text-center text-4xl uppercase my-8 ">
-					Users table:
-				</h1>
+				<h1 className="text-center text-4xl uppercase my-8 ">Users table:</h1>
 			</div>
 			<div className="flex-grow">
 				<div className="mb-8 flex space-x-4 justify-between md:justify-start">
 					<FilterSelector
 						selectedFilter={selectedFilter}
-						onChange={e => setSelectedFilter(e.target.value)}
+						onChange={e => {
+							setSelectedFilter(e.target.value);
+							setSearchValue('');
+						}}
 					/>
 					<SearchInput
 						value={searchValue}
